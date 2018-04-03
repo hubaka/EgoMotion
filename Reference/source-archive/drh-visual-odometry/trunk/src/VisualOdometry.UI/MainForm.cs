@@ -79,14 +79,14 @@ namespace VisualOdometry.UI
 			}
 			else
 			{
-				m_Capture = new Capture(@"C:\svnDev\oss\Google\drh-visual-odometry\TestVideos\2010-07-18 11-10-22.853.wmv");
+				m_Capture = new Capture(@"C:\Users\akathire\Documents\pIm\work\Attendance\git\EM\EgoMotion\TestVideos\2010-07-18 11-10-22.853.wmv");
 				m_Timer.Interval = 33;
 				m_Timer.Enabled = true;
 
-				cameraParameters = CameraParameters.Load(@"C:\svnDev\oss\Google\drh-visual-odometry\CalibrationFiles\MicrosoftCinema\Focus12\1280x720\MicrosoftCinemaFocus12_1280x720.txt");
+				cameraParameters = CameraParameters.Load(@"C:\Users\akathire\Documents\pIm\work\Attendance\git\EM\EgoMotion\Reference\source-archive\drh-visual-odometry\trunk\CalibrationFiles\MicrosoftCinema\Focus12\1280x720\MicrosoftCinemaFocus12_1280x720.txt");
 
-				groundProjectionTransformation = HomographyMatrixSupport.Load(@"C:\svnDev\oss\Google\drh-visual-odometry\CalibrationFiles\MicrosoftCinema\Focus12\1280x720\BirdsEyeViewTransformationForCalculation.txt");
-				m_GroundProjectionTransformationForUI = HomographyMatrixSupport.Load(@"C:\svnDev\oss\Google\drh-visual-odometry\CalibrationFiles\MicrosoftCinema\Focus12\1280x720\BirdsEyeViewTransformationForUI.txt");
+				groundProjectionTransformation = HomographyMatrixSupport.Load(@"C:\Users\akathire\Documents\pIm\work\Attendance\git\EM\EgoMotion\Reference\source-archive\drh-visual-odometry\trunk\CalibrationFiles\MicrosoftCinema\Focus12\1280x720\BirdsEyeViewTransformationForCalculation.txt");
+				m_GroundProjectionTransformationForUI = HomographyMatrixSupport.Load(@"C:\Users\akathire\Documents\pIm\work\Attendance\git\EM\EgoMotion\Reference\source-archive\drh-visual-odometry\trunk\CalibrationFiles\MicrosoftCinema\Focus12\1280x720\BirdsEyeViewTransformationForUI.txt");
 			}
 
 			m_VisualOdometer = new VisualOdometer(m_Capture, cameraParameters, groundProjectionTransformation, new OpticalFlow());

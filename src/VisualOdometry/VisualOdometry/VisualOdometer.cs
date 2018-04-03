@@ -4,10 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Emgu.CV;
+
 namespace VisualOdometry
 {
     public class VisualOdometer : IDisposable
     {
+
+        public VisualOdometer(Capture capture, CameraParameters cameraParameters, HomographyMatrix birdsEyeViewTransformation, OpticalFlow opticalFlow)
+        {
+
+        }
 
 
         public void Dispose()
